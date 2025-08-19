@@ -1,3 +1,60 @@
-div{
-    color: red;
+ body,ul,li{
+    margin:0;
+    padding: 0;
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color : inherit;
+}
+
+/* 라이브러리 */
+.border-red {
+    border : solid 5px red;
+}
+
+.border-black {
+    border : solid 5px black;
+}
+
+.border-blue {
+    border : solid 5px blue;
+}
+
+.border-green {
+    border : solid 5px green;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-jc-c {
+    justify-content: center;
+}
+
+.flex-ai-c {
+    align-items: center;
+}
+
+.flex-grow-1 {
+    flex-grow: 1;
+}
+
+.block {
+    display: block;
+}
+
+.height-100p {
+    height : 100%;
+}
+
+.con {
+    margin-inline:auto;
+}
+
+.img-box > img {
+    width: 100%;
+    display: block;
 }
