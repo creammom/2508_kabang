@@ -4,30 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- 폰트어썸 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 </head>
 <body>
-    <header class="con-min-width border-green">
-        <div class="con border-blue flex">
-            <div class="border-red">
-                <a href="#"><img src="../kabang-imgs/logo_black.svg" alt=""></a>
+    <header class="con-min-width">
+        <div class="con flex corder-blue height-100p">
+            <div class="logo_wrap flex-as-c">
+                <a href="#">
+                    <img src="../kabang-imgs/logo_black.svg" alt="">
+                </a>
             </div>
 
-        <div class="border-black flex-grow-1"></div>
+            <div class="flex-grow-1"></div>
 
-        <nav class="menu-box border-red">
-            <ul>
-                <li><a href="#">은행소개</a></li>
-                <li><a href="#">IR투자정보</a></li>
-                <li><a href="#">상품안내</a></li>
-                <li><a href="#">고객센터</a></li>
-            </ul>
-        </nav>
+            <nav class="menu_box border-red height-100p">
+                <ul class="flex">
+                    <li><a href="#" class="flex flex-ai-c height-100p">은행소개</a></li>
+                    <li><a href="#" class="flex flex-ai-c height-100p">IR투자정보</a></li>
+                    <li><a href="#" class="flex flex-ai-c height-100p">상품안내</a></li>
+                    <li><a href="#" class="flex flex-ai-c height-100p">고객센터</a></li>
+                </ul>
+            </nav>
 
-        <div class="border-red">
-            <a href="#">관련 사이트</a>
+            <div class="dropdown flex-as-c border-red">
+                <button class="dropBtn">
+                    <span>관련사이트</span>
+                    <span><i class="fa-solid fa-angle-down"></i></span>
+                </button>
+            </div>
         </div>
-        </div>
-
 
     </header>
     
@@ -44,6 +50,7 @@
         }
 
         /* 라이브러리 */
+
         .border-red {
             border : solid 5px red;
         }
@@ -70,6 +77,10 @@
 
         .flex-ai-c {
             align-items: center;
+        }
+
+        .flex-as-c {
+            align-self: center;
         }
 
         .flex-grow-1 {
@@ -101,6 +112,33 @@
         .con {
             width : 1080px;
         }
+
+        /* --------------- 헤더 시작 --------------- */
+
+        header {
+            height : 80px;
+            font-size : 15px;
+            background-color: beige;
+        }
+
+        /* 로고 시작 */
+
+        header .logo_wrap > a {
+            width : 115px;
+        }
+
+        header .logo_wrap > a > img {
+            width : 100%;
+        }
+
+        /* 로고 끝 */
+
+        /* 메뉴 시작 */
+
+        /* 메뉴 끝 */
+
+        /* --------------- 헤더 끝 --------------- */
+
     </style>
 </body>
 </html>
