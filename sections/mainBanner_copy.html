@@ -29,8 +29,18 @@
         </p>
 
         <ul class="btns flex">
-          <li><a href="#">Google Play</a></li>
-          <li><a href="#">App Store</a></li>
+          <li>
+            <a href="#">
+              <span class="ico ico-1"></span>
+              <span>Google Play</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="ico ico-2"></span>
+              <span>App Store</span>
+            </a>
+          </li>
         </ul>
       </div>
     </div>
@@ -104,6 +114,14 @@
         display: block;
       }
 
+      .ico {
+        background-color: white;
+        width: 24px;
+        height: 24px;
+        display: block;
+        background-image: url(https://kakaobank.com/static/images/web/img_kabang_220615.png);
+      }
+
       /* 커스텀 */
       .con-min-width {
         min-width: 1080px;
@@ -120,6 +138,7 @@
       .main_banner {
         position: relative;
         background-color: #ffef6b;
+        padding: 100px;
       }
 
       .main_banner > .text_box > h3 {
@@ -144,18 +163,36 @@
 
       .main_banner > .text_box > .btns > li > a {
         display: block;
-        width : 178px;
-        height : 56px;
-        border: 1px solid rgba(255, 255, 255, .3);
-        border-radius : 12px;
-        font-size : 16.2px;
-        font-weight : bold;
-        line-height : 56px;
+        width: 178px;
+        height: 56px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 12px;
+        font-size: 16.2px;
+        font-weight: bold;
+        line-height: 56px;
         color: #333;
         background-color: #fff;
-        text-align : center;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
-      
+
+      .main_banner > .text_box > .btns .ico {
+        margin-right : 10px;
+      }
+
+      .main_banner > .text_box > .btns > li:hover > a {
+        text-decoration: underline;
+      }
+
+      .main_banner > .text_box > .btns .ico-1 {
+        background-position: -341px -292px;
+      }
+
+      .main_banner > .text_box > .btns .ico-2 {
+        background-position: -371px -292px;
+      }
 
       /* --------------- 메인 배너 끝 --------------- */
     </style>
