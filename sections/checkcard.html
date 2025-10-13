@@ -6,6 +6,16 @@
     <title>카카오뱅크 모작</title>
     <!-- 제이쿼리 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- 슬릭 슬라이더 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+    />
     <!-- 폰트어썸 -->
     <link
       rel="stylesheet"
@@ -36,37 +46,37 @@
         <div class="slider_box">
           <div class="arrows">
             <div class="btn_arrow_left">
-              <img src="/kabang-imgs/img-left.png" alt="">
+              <img src="/kabang-imgs/img-left.png" alt="" />
             </div>
             <div class="btn_arrow_right">
-              <img src="/kabang-imgs/img-right.png" alt="">
+              <img src="/kabang-imgs/img-right.png" alt="" />
             </div>
           </div>
 
           <div class="slick">
             <div class="item">
-              <div class="img_box">
-                <img src="/kabang-imgs/imageye___-_imgi_14_card-1.png" alt="">
+              <div class="img-box">
+                <img src="/kabang-imgs/imageye___-_imgi_14_card-1.png" alt="" />
               </div>
             </div>
             <div class="item">
-              <div class="img_box">
-                <img src="/kabang-imgs/imageye___-_imgi_10_card-2.png" alt="">
+              <div class="img-box">
+                <img src="/kabang-imgs/imageye___-_imgi_10_card-2.png" alt="" />
               </div>
             </div>
             <div class="item">
-              <div class="img_box">
-                <img src="/kabang-imgs/imageye___-_imgi_11_card-3.png" alt="">
+              <div class="img-box">
+                <img src="/kabang-imgs/imageye___-_imgi_11_card-3.png" alt="" />
               </div>
             </div>
             <div class="item">
-              <div class="img_box">
-                <img src="/kabang-imgs/imageye___-_imgi_12_card-4.png" alt="">
+              <div class="img-box">
+                <img src="/kabang-imgs/imageye___-_imgi_12_card-4.png" alt="" />
               </div>
             </div>
             <div class="item">
-              <div class="img_box">
-                <img src="/kabang-imgs/imageye___-_imgi_13_card-5.png" alt="">
+              <div class="img-box">
+                <img src="/kabang-imgs/imageye___-_imgi_13_card-5.png" alt="" />
               </div>
             </div>
           </div>
@@ -172,6 +182,7 @@
 
       .checkcard_box {
         padding-top: 150px;
+        padding-bottom: 120px;
       }
 
       .checkcard_box h3 {
@@ -219,14 +230,55 @@
         display: block;
       }
 
-      .checkcard_box .slider_box{
+      /* 슬라이드 시작 */
+
+      .checkcard_box .slider_box {
         position: relative;
-        width : 660px;
-        margin: 50px auto 0 auto;
+        width: 660px;
+        margin: 75px auto 0 auto;
       }
 
+      .checkcard_box .slider_box .arrows div {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: calc(100% + 170px);
+        cursor: pointer;
+      }
 
-      /* --------------- 채크카드 끝 --------------- */
+      .checkcard_box .slider_box .arrows div:last-child {
+        right: auto;
+        left: calc(100% + 170px);
+      }
+
+      .checkcard_box .slider_box .slick .item .img-box {
+        padding-top: 45px;
+        padding-bottom: 45px;
+      }
+
+      .checkcard_box .slider_box .slick .item.slick-center {
+        transform: scale(1.25);
+      }
+
+      /* --------------- 체크카드 끝 --------------- */
     </style>
+
+    <script>
+      function SliderBox1__init() {
+        $(".slider_box > .slick").slick({
+          dots: false,
+          autoplay: false,
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          centerMode: true,
+          centerPadding: 0,
+          arrows: true,
+          prevArrow: ".slider_box > .arrows > .btn_arrow_left",
+          nextArrow: ".slider_box > .arrows > .btn_arrow_right",
+        });
+      }
+
+      SliderBox1__init();
+    </script>
   </body>
 </html>
